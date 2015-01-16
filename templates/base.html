@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <title>{% if title %}{{ title }} - {% endif %}TraktClone</title>
+  </head>
+  <body>
+    <span style="position:absolute; right: 10; top: 10; text-align: right">
+      {% if name %}
+        Hello {{ name }}! <a href="/logout/">Log out</a>
+      {% else %}
+        <a href="/register/">Register</a> | <a href="/login/">Log in</a>
+      {% endif %}
+    </span>
+    {% if content %}
+      {{ content }}
+    {% endif %}
+  </body>
+</html>
